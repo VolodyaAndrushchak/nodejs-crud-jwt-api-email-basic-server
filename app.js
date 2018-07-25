@@ -84,7 +84,6 @@ module.exports =
 	var request_handler_1 = __webpack_require__(7);
 	var auth_api_1 = __webpack_require__(6);
 	var md5 = __webpack_require__(2);
-	var MobileDetect = __webpack_require__(23);
 	var APIHandler = (function () {
 	    function APIHandler(globalService, db, JWT, CRUD, ES) {
 	        this.globalService = globalService;
@@ -465,7 +464,7 @@ module.exports =
 	var jwt_service_1 = __webpack_require__(13);
 	var crud_service_1 = __webpack_require__(10);
 	var email_service_1 = __webpack_require__(11);
-	var path = __webpack_require__(25);
+	var path = __webpack_require__(24);
 	var express = __webpack_require__(18);
 	var bodyParser = __webpack_require__(15);
 	var cookieParser = __webpack_require__(16);
@@ -751,7 +750,7 @@ module.exports =
 
 	"use strict";
 	var rxjs_1 = __webpack_require__(1);
-	var MongoClient = __webpack_require__(24).MongoClient;
+	var MongoClient = __webpack_require__(23).MongoClient;
 	var url = 'mongodb://root:root@ds115436.mlab.com:15436/heroku_l8mlnz5x';
 	var DBClient = (function () {
 	    function DBClient(globalService) {
@@ -835,16 +834,10 @@ module.exports =
 /* 23 */
 /***/ (function(module, exports) {
 
-	module.exports = require("mobile-detect");
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
 	module.exports = require("mongodb");
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	module.exports = require("path");

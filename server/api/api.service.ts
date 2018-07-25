@@ -11,8 +11,7 @@ import * as path from 'path';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { EmailService } from './../common/email.service';
-var md5 = require('md5');
-const MobileDetect: any = require('mobile-detect');
+const md5 = require('md5');
 
 export interface APIResponse {
     status: boolean,
