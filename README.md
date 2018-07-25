@@ -1,35 +1,35 @@
-# Angular 2 Universal Starter [![Universal Angular 2](https://img.shields.io/badge/universal-angular2-brightgreen.svg?style=flat)](https://github.com/angular/universal)
+## Basic Typescript Nodejs (Express) server
 
-A minimal Angular 2 starter for Universal JavaScript using TypeScript and Webpack
+##### The basic typescript server has already developed
+* CRUD model
+* JWT authorization
+* email service
+* global service
+* request handler class
+* API service
+* signup/signin process
 
-> If you're looking for the repo from the AngularConnect talk look in the [angular-connect branch](https://github.com/angular/universal-starter/tree/angular-connect)  
-If you're looking for a SystemJS version of the repo look in the [systemjs branch](https://github.com/angular/universal-starter/tree/systemjs)
+* ## Installation
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+  `npm install`
 
-## Installation
+* ## Setup  
 
-* `npm install`
+  Use isProduction global variable in bootstrap.ts as global variable;
+  be sure that you have made changes for prod/dev only in bootstrap file;
 
-## Serve
+  Set hosts in `server/bootstrap.ts`
 
-* `npm start` to build your client app and start a web server
-* `npm run build` to prepare a distributable bundle
+* ## Development
 
-## Development
-* run `npm start` and `npm run watch` in two separate terminals to build your client app, start a web server, and allow file changes to update in realtime
+  `npm start` to prepare a distributable bundle
 
-## Watch files
-* `npm run watch` to build your client app and start a web server
+* ## Setup mongo database
 
-# DONT FORGET TO CHANGE DB IN FOLDER server/db/db.client.ts for developmnet of production
+  Set necessary mongodb url in `server/db/db.client.ts`
 
-# Set emails in 'server/common/email.service.ts'
+* ## Emails service
 
-# Set hosts in 'server/bootstrap.ts'
+  Set emails in `server/common/email.service.ts`
 
-#1 Set necessary mongodb url in db/db.client.ts;
-
-#2 Use isProduction global variable in bootstrap.ts as global variable;
-
-#3 be sure that you have made changes for prod/dev only in bootstrap;
+* ## Enjoy!

@@ -9,23 +9,12 @@ export const secret: string = '0f952eb0-5da5-45ad-8971-a9b15f9db6db';
 
 const UNAUTHORIZED_PATHS: Array<string> = [
     '/favicon.ico',
-    '/v1/upload/img',
     '/v1/auth/login',
-    '/v1/auth/admin-login',
     '/v1/auth/register',
-    '/v1/auth/login-social',
-    '/v1/auth/forgot-password',
     '/v1/auth/check-email',
-    '/v1/auth/check-email-add',
-    '/v1/user/new-request',
     '/v1/auth/set-password',
-    '/verify',
     '/privacypolicy',
     '/v1/auth/verify',
-    '/reset',
-    '/v1/auth/reset-password',
-    '/v1/auth/send-pass-again',
-    '/v1/search-users',
     '/mail/recovery-password',
     '/mail/verification',
 ];

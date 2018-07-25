@@ -479,14 +479,14 @@ module.exports =
 	        global.isProduction = false;
 	        if (global.isProduction) {
 	            console.log = function () { };
-	            this.stagingServer = 'https://music-agency-server.herokuapp.com';
-	            this.stagingClient = 'https://music-agency-client.herokuapp.com/#';
-	            this.stagingOnluForCORS = 'https://music-agency-client.herokuapp.com';
+	            this.stagingServer = '';
+	            this.stagingClient = '';
+	            this.stagingOnluForCORS = '';
 	        }
 	        else {
-	            this.stagingServer = 'http://localhost:1337';
-	            this.stagingClient = 'http://localhost:4200/#';
-	            this.stagingOnluForCORS = 'http://localhost:4200';
+	            this.stagingServer = '';
+	            this.stagingClient = '';
+	            this.stagingOnluForCORS = '';
 	        }
 	        this.dbClient = new db_client_1.DBClient(this.globalService);
 	        this.dbClient.connect().subscribe(function () {
@@ -626,8 +626,8 @@ module.exports =
 	        this.CRUD = CRUD;
 	        this.stagingServer = stagingServer;
 	        this.stagingClient = stagingClient;
-	        this.emailInfo = 'legalforum@ukr.net';
-	        this.emailForProblems = 'legalforum@ukr.net';
+	        this.emailInfo = '';
+	        this.emailForProblems = '';
 	    }
 	    EmailService.prototype.sendVerificationLink = function (email, hash) {
 	        var _this = this;
@@ -655,18 +655,18 @@ module.exports =
 	        return new rxjs_1.Observable(function (observer) {
 	            nodemailer.createTestAccount(function (err, account) {
 	                var transporter = nodemailer.createTransport({
-	                    host: 'smtp.mail.yahoo.com',
+	                    host: '',
 	                    port: 465,
 	                    secure: true,
 	                    auth: {
-	                        user: 'reart_org@yahoo.com',
-	                        pass: 'qj7nd90f'
+	                        user: '',
+	                        pass: ''
 	                    }
 	                });
 	                var mailOptions = {
-	                    from: 'reart_org@yahoo.com',
+	                    from: '',
 	                    to: email,
-	                    subject: 'Re Art verification',
+	                    subject: 'Verification',
 	                    text: '',
 	                    html: html
 	                };
@@ -708,23 +708,12 @@ module.exports =
 	exports.secret = '0f952eb0-5da5-45ad-8971-a9b15f9db6db';
 	var UNAUTHORIZED_PATHS = [
 	    '/favicon.ico',
-	    '/v1/upload/img',
 	    '/v1/auth/login',
-	    '/v1/auth/admin-login',
 	    '/v1/auth/register',
-	    '/v1/auth/login-social',
-	    '/v1/auth/forgot-password',
 	    '/v1/auth/check-email',
-	    '/v1/auth/check-email-add',
-	    '/v1/user/new-request',
 	    '/v1/auth/set-password',
-	    '/verify',
 	    '/privacypolicy',
 	    '/v1/auth/verify',
-	    '/reset',
-	    '/v1/auth/reset-password',
-	    '/v1/auth/send-pass-again',
-	    '/v1/search-users',
 	    '/mail/recovery-password',
 	    '/mail/verification',
 	];
@@ -763,7 +752,7 @@ module.exports =
 	"use strict";
 	var rxjs_1 = __webpack_require__(1);
 	var MongoClient = __webpack_require__(24).MongoClient;
-	var url = 'mongodb://root:root1234@ds125211.mlab.com:25211/heroku_sxb31jh2';
+	var url = 'mongodb://root:root@ds115436.mlab.com:15436/heroku_l8mlnz5x';
 	var DBClient = (function () {
 	    function DBClient(globalService) {
 	        this.globalService = globalService;
